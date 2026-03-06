@@ -642,11 +642,10 @@ ol {
 
 .stories__track {
   display: flex;
-  gap: clamp(1.2rem, 3vw, 2.5rem);
+  gap: 0;
   padding: 12px var(--container-padding);
   overflow: visible;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 
@@ -658,6 +657,7 @@ ol {
   flex-shrink: 0;
   cursor: pointer;
   transition: transform var(--transition-fast);
+  width: 120px;
 }
 
 .stories__item:hover {
@@ -1636,6 +1636,16 @@ ol {
 
   .stories__track {
     justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .stories__track::-webkit-scrollbar {
+    display: none;
   }
 }
 
